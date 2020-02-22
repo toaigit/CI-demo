@@ -7,7 +7,7 @@ cd tmp
 
 # download the servlet terraform to create servlet EC2 instance
 git config --global http.sslverify false
-git clone https://github.com/toaigit/servlet.git
+git clone https://gitlab.com/toaigit/servlet.git
 cd servlet
 
 echo "DEBUG: Current Directory:  $PWD"
