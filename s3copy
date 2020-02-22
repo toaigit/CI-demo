@@ -1,0 +1,13 @@
+#!/bin/bash
+#  This script need to run manually by the developer to update their script and data
+aws s3 cp add.txt s3://toai-test.s.e/add.txt
+aws s3 cp run.sh s3://toai-test.s.e/run.sh
+
+#  other s3 commands s3 commands for your reference
+#aws s3 ls s3://toai-test.s.e  (list directory)
+#aws s3 cp s3://toai-test.s.e/total.txt result.txt (download)
+#aws s3 cp total.txt  s3://toai-test.s.e/total.txt (upload)
+#aws s3 rm s3://toai-test.s.e/total.txt (remove a file)
+#aws s3 rb s3://bucket-name --force (remove bucket)
+#aws s3 sync . s3://bucket-name/path --delete
+#aws s3 sync s3://bucket-name/path . --delete
