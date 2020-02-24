@@ -19,6 +19,10 @@ Variable defined in UI at the project level, and at the project namespace level.
 *   AWS_DEFAULT_REGION: us-west-2
 *   AWS_ACCESS_KEY_ID : AL3OLXE3J40FOSJFLSDF
 
+All jobs in the same stage are run in parallel
+
+Jobs of the next stage are run only previous jobs stage ran successfully.
+
 Here is a sample of the gitlab-ci.yml
 ```
 variables:
@@ -52,6 +56,20 @@ deploy_uat:
       FIRST_NAME: "Jane"
       LAST_NAME: "Doe"
 
+deploy_prod:
+  stage: deploy
+  environment:
+        name: production
+  script:
+        - ./deploy.sh
+  only:
+      - master
+  variables:
+      FIRSTNAME: "George"
+      LASTNAME: "Washington"
+  when:
+      manual
+      
 test_servlet:
   stage: test
   environment:
