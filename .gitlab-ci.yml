@@ -8,18 +8,15 @@ stages:
 deploy_servlet:
   stage: deploy
   script:
-        - echo "Spawn EC2 Servlet"
         - ./deploy.sh
   only:
       - master
   environment:
         name: prd
-        url: https://staging.example.com
 
 test_servlet:
   stage: test
   environment:
         name: prd
-        url: https://staging.example.com
   script:
         - ./test.sh
