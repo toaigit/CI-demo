@@ -23,6 +23,13 @@ All jobs in the same stage are run in parallel
 
 Jobs of the next stage are run only previous jobs stage ran successfully.
 
+```
+In addition to sections stage, environment, script, only, variables, you can have tags section.  The tags section defines which runner can run this job (runner with the same tags).  For example, this job can only run in a gitlab-runner with has tags production and php:
+tags:
+    - production
+    - php
+```
+
 Here is a sample of the gitlab-ci.yml
 ```
 variables:
