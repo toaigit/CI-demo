@@ -1,5 +1,4 @@
 Brain teasers!!!
-*  What happens when you terminate an instance?
 *  How do you terminate an instance with Auto Scale Group?
 *  How long you have to wait after you made a change to IAM privilge?
 *  An IAM user was granted to launch an instance. If the EC2 instance should include an instance profile—that is, Which IAM permission the user who launches the EC2 instance must also have?  See IAMInstanceProfile
